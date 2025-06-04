@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">网上订餐app</string>
+    <string name="shop_titleName">店铺</string>
+    <string name="menu">菜单</string>
+    <string name="shop_address">店铺地址信息</string>
+
+</resources>

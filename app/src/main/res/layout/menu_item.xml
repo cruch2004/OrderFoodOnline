@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:background="@drawable/menu_item_bg_selector"
+    android:padding="10dp">
+    <!--商品图片-->
+    <ImageView
+        android:id="@+id/iv_food_pic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/iv_food_pic"
+        android:orientation="vertical">
+        <!--商品名-->
+        <TextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+        <!--原料介绍-->
+        <TextView
+            android:id="@+id/tv_food_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/ingredients_bg"
+            android:padding="4dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+        <!--销售数量-->
+        <TextView
+            android:id="@+id/tv_food_sale_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/color_gray"
+            android:textSize="12sp" />
+        <!--商品价格-->
+        <TextView
+            android:id="@+id/tv_food_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/price_red"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!--加入购物车按钮-->
+    <Button
+        android:id="@+id/btn_add_cart"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/add_cart_selector"
+        android:gravity="center"
+        android:text="加入购物车"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+</RelativeLayout>

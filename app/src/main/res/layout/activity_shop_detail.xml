@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shop_bg_color"
+        android:orientation="vertical">
+        <!--界面标题区域-->
+        <include layout="@layout/shop_detail_title_bar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingTop="60dp">
+            <!--菜单文字-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="菜单"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+            <!--分割线(菜单列表之间)-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_gray" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--店铺信息区域-->
+    <include layout="@layout/shop_detail_bar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp">
+        <!--商品列表-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_shop_food_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp" />
+        <!--购物车列表RecyclerView列表-->
+        <include layout="@layout/shopping_cart_bar" />
+        <!--购物车底部跳转付款界面-->
+        <include layout="@layout/cart_bottom_bar" />
+    </RelativeLayout>
+</FrameLayout>
