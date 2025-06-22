@@ -1,56 +1,40 @@
-1. What is this project?
+1. 这个项目是什么？
 
-This project is a simplified version of a food delivery program developed with Android to simulate the basic functions of ordering food.
-As my final project in the Android course
-Through this project, I have mastered the core skills of Android app development, including interface design, data interaction, and the use of RecyclerView.
-And upload it to GitHub, hoping to help developers with similar needs, or as a reference for learning.
+    该项目是使用 Android 开发的送餐程序的简化版本，用于模拟点餐的基本功能。作为我在 Android 课程的最后一个项目，通过这个项目，我掌握了 Android 应用开发的核心技能，包括界面设计、数据交互以及 RecyclerView 的使用。并上传到 GitHub，希望能帮助到有相似需求的开发者，或者作为学习的参考。
 
-2. What are the main features?
+2. 主要功能有哪些？
+   
+    商店列表显示：解析本地 JSON 数据以显示商店的名称、地址、送货时间、公告和其他信息。
+   
+    菜品选择：每个门店下都有菜品的详细展示，点击项目放大菜品的图片信息，用户可以选择菜品后点击“加入购物车”按钮加入购物车。
+   
+    购物车管理：用户可以查看所选菜品，修改数量或删除菜品，并实时显示菜品总价与店铺起售价的差额。
+   
+    订单功能：用户在购物车页面下单，可以查看订单详情，自定义收货地址信息。
+   
+    支付功能：暂时使用二维码接收图片，然后进行更改，引入微信支付等支付方式。
 
-Store list display: Parse local JSON data to display the store's name, address, delivery time, announcement, and other information.
 
-Dish selection: There is a detailed display of dishes under each store, click Item to enlarge the picture information of the dishes, and users can select the dishes and click the "Add to Cart" button to add to the cart.
+3. 使用技术栈有哪些？
 
-Shopping cart management: Users can view the selected dishes, modify the quantity or delete the dishes, and display the difference between the total price of the dishes and the starting price of the store in real time.
+    开发语言：Java
 
-Order function: The user places an order on the shopping cart page, and can view the order details and customize the delivery address information.
+    开发工具：Android Studio
 
-Payment function: temporarily use the QR code to receive the picture instead, and then make changes to introduce payment methods such as WeChat payment.
+    UI 组件：RecyclerView、ViewPager、CardView、Button、Dialog 等
 
-3. What are the tech stacks to use?
+    数据存储：SQLite 用于在本地存储订单数据
 
-Development language: Java
+    网络请求：使用 Retrofit 或 OkHttp 与服务器通信
+   
+4. 如何使用此项目？
 
-Development Tools: Android Studio
+   克隆存储库：https://github.com/cruch2004/OrderFoodOnline.git4. How to use this item?
 
-UI components: RecyclerView, ViewPager, CardView, Button, Dialog, etc
+5. 本地 JSON 数据存储位置：
 
-Data storage: SQLite is used to store order data locally
+    项目结构中的 server_data/order 文件夹存储项目使用的 JSON 数据文件和 .PNG 文件
 
-Network Request: Use Retrofit or OkHttp to communicate with the server
+    server_data/order 位于 Tomcat packagewebappsROOT 目录中
 
-4. How to use this item?
-
-Clone repository: https://github.com/cruch2004/OrderFoodOnline.git
-
-5. How to contribute?
-
-If you are interested in contributing code to this project, please follow these steps:
-
-Fork this repository.
-
-Create a new branch (git checkout -b feature/your-feature-name).
-
-Commit your changes (git commit -am 'Add new feature').
-
-Push to your branch (git push origin feature/your-feature-name).
-
-Submit a pull request.
-
-6. Local JSON data storage location:
-
-The server_data/order folder in the project structure stores the JSON data files and .PNG files used by the project
-
-server_data/order is located in the Tomcat packagewebappsROOT directory
-
-Before the project runs, you need to start the Tomcat server (bin/startup.bat)
+    在项目运行之前，您需要启动 Tomcat 服务器 （bin/startup.bat）
